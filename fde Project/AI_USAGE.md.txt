@@ -1,0 +1,19 @@
+# AI Usage and Collaboration Statement
+
+This project was developed using a modern engineering workflow, combining personal architectural decisions with AI-assisted code generation (LLM) to accelerate boilerplate tasks and UI development. 
+
+### 1. Personal Contributions (Developer Driven)
+The core foundation, business logic, and system architecture were strictly driven and verified by me:
+- **System Architecture & Database Design:** Designed the SQLAlchemy schemas (`models.py`) and Pydantic validation models (`schemas.py`) to ensure strict typing and state management for discrepancies.
+- **Business Logic Implementation:** Implemented the core reconciliation engine, specifically ensuring strict adherence to the assessment's rules (e.g., ensuring `PENDING` states in DP files are not treated as settled quantities and calculating exact integer deltas).
+- **Environment & Integration Debugging:** Manually configured CORS middleware for cross-origin requests, resolved Python environment module errors, and managed the split-stack environment orchestration.
+- **Data Flow & Desk Decisions:** Authored the Level 0 desk readback, defining source authority and edge cases for the operations team.
+
+### 2. AI-Assisted Tasks (LLM Driven)
+AI was utilized as a pair-programming assistant to speed up routine coding and frontend styling:
+- **Frontend Scaffolding:** Used AI to generate the Tailwind CSS layout and React component structure for the read-only dashboard.
+- **Syntax & Error Resolution:** Consulted AI to quickly resolve specific framework syntax errors (e.g., Vite config warnings and FastAPI relative import constraints).
+- **Dummy Data Generation:** Used AI to generate valid `internal.csv` and `dp.html` test files matching the required headers to rapidly test the ingestion pipeline.
+
+### Verification Statement
+All AI-generated code, particularly the React state management and Axios API calls, was manually reviewed, integrated into the correct directory structures, and thoroughly tested against the local SQLite database to ensure it meets the strict requirements of the FDE assessment.
